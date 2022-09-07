@@ -3,8 +3,8 @@
 #include <PubSubClient.h>// Import PubSubClient library to initialize MQTT protocol
 #include <SPI.h>
 #include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
+#include <Adafruit_GFX.h>//Librerias necesarias
+#include <Adafruit_SSD1306.h>// Librerias necesarias
 // Update these with values suitable for your network.
 // Definir constantes
 #define ANCHO_PANTALLA 128 // ancho pantalla OLED
@@ -65,7 +65,7 @@ Serial.println(content);
 long variable1;
 variable1 = content.toInt();
  
-  if (variable1 > 30) {
+  if (variable1 >= 30) {
     digitalWrite(LED_verde, HIGH);
     digitalWrite(Motor_a, HIGH);
     digitalWrite(Motor_b, LOW);
@@ -78,7 +78,7 @@ variable1 = content.toInt();
     display.display();
     } 
     
-   if (variable1 > 16 && variable1 < 20) {
+   if (variable1 >= 20 && variable1 <= 16) {
     digitalWrite(LED_verde, LOW);
     digitalWrite(Motor_a, LOW);
     digitalWrite(Motor_b, LOW);
@@ -91,7 +91,7 @@ variable1 = content.toInt();
     display.display();
   }
 
-   if (variable1 < 15) {
+   if (variable1 <= 15) {
     digitalWrite(LED_verde, HIGH);
     digitalWrite(Motor_a, LOW);
     digitalWrite(Motor_b, HIGH);
