@@ -1,3 +1,9 @@
+/*realice un programa que cumpla los siguientes requsitos:
+No. 1 cuando la temperatura sea >= a 30° debe activar un ventilador
+No. 2 cuando la temperatura sea <= a 20° debe de apagarse el ventilador
+No. 3 cuando la temperatura sea <= a 15° debe de invertir el giro del ventilador
+utilizar ESP32, pantalla OLED, trabajar en un solo broquer liceo/roosevelt/mateo"1 y 2" */
+
 #define __DEBUG__
 #include <WiFi.h> // Import ESP32 WiFi library
 #include <PubSubClient.h>// Import PubSubClient library to initialize MQTT protocol
